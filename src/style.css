@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-paper text-ink;
+    min-height: 100vh;
+  }
+}
+
+@layer components {
+  .ancient-card {
+    @apply bg-card border border-border rounded-ancient shadow-md;
+    background-image: 
+      radial-gradient(circle at 20% 50%, rgba(212, 175, 55, 0.03) 0%, transparent 50%),
+      linear-gradient(to bottom, rgba(255,254,249,0.9), rgba(245,241,232,0.5));
+  }
+
+  .ancient-btn {
+    @apply px-6 py-3 rounded-ancient font-serif font-semibold transition-all duration-300;
+    background: linear-gradient(135deg, #B94A48 0%, #8B3A38 100%);
+    color: #FFFEF9;
+    box-shadow: 0 2px 8px rgba(185, 74, 72, 0.3);
+  }
+  
+  .ancient-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(185, 74, 72, 0.4);
+  }
+  
+  .ancient-btn:active {
+    transform: translateY(0);
+  }
+
+  .yin-line {
+    @apply relative h-1 w-full rounded;
+    background-color: #8B7355;
+  }
+  
+  .yin-line::before {
+    content: '';
+    @apply absolute top-0 left-1/4 h-full w-2/4 rounded;
+    background-color: #F5F1E8;
+  }
+
+  .yang-line {
+    @apply h-1 w-full rounded;
+    background-color: #2C2416;
+  }
+
+  .moving-indicator {
+    @apply w-6 h-6 rounded-full border-2 border-cinnabar flex items-center justify-center text-cinnabar text-xs font-bold animate-pulse;
+  }
+}
