@@ -3,7 +3,7 @@
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
       <div class="flex items-center justify-between h-16">
         <router-link to="/" class="flex items-center gap-2 group">
-          <span class="text-2xl">🔮</span>
+          <span class="text-2xl">☯</span>
           <h1 class="font-serif text-xl font-bold text-ink group-hover:text-cinnabar transition-colors">
             高岛易断
           </h1>

@@ -2,7 +2,7 @@
   <div class="min-h-screen bg-paper">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 py-8">
       <div class="text-center mb-8">
-        <h1 class="font-serif text-3xl sm:text-4xl font-bold text-ink mb-2">🔮 高岛易断占卜</h1>
+        <h1 class="font-serif text-3xl sm:text-4xl font-bold text-ink mb-2">☯ 高岛易断占卜</h1>
         <p class="text-sm text-inkLight">诚心问卜，得见天机</p>
       </div>
 
@@ -94,7 +94,7 @@
                 <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"/>
                 <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"/>
               </svg>
-              <span v-if="!isDivining">{{ mode === 'random' ? '开始占卜 🔮' : '确认卦象 🔮' }}</span>
+              <span v-if="!isDivining">{{ mode === 'random' ? '开始占卜 ☯' : '确认卦象 ☯' }}</span>
               <span v-else>{{ mode === 'random' ? '正在起卦...' : '正在解析...' }}</span>
             </button>
           </div>

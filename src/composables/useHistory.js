@@ -1,5 +1,14 @@
 import { ref, computed } from 'vue'
-import { getHistory, deleteHistoryItem, updateHistoryComment, getCurrentUser, setCurrentUser } from '../utils/storage.js'
+import { 
+  getHistory, 
+  deleteHistoryItem, 
+  updateHistoryComment, 
+  getCurrentUser, 
+  setCurrentUser,
+  exportHistory,
+  importHistory,
+  downloadHistoryFile
+} from '../utils/storage.js'
 
 export function useHistory() {
   const currentUser = ref(getCurrentUser())
@@ -57,6 +66,22 @@ export function useHistory() {
     filter.value = value
   }
   
+  function exportData() {
+    return exportHistory(currentUser.value)
+  }
+  
+  function downloadExport() {
+    return downloadHistoryFile(currentUser.value)
+  }
+  
+  function importData(jsonData, mode = 'merge') {
+    const result = importHistory(currentUser.value, jsonData, mode)
+    if (result.success) {
+      historyList.value = getHistory(currentUser.value)
+    }
+    return result
+  }
+  
   return {
     currentUser,
     historyList,
@@ -65,6 +90,9 @@ export function useHistory() {
     loadHistory,
     removeItem,
     updateComment,
-    setFilter
+    setFilter,
+    exportData,
+    downloadExport,
+    importData
   }
 }

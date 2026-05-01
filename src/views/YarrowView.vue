@@ -68,7 +68,7 @@
             <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"/>
             <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"/>
           </svg>
-          <span v-if="!isDivining">确认起卦 🔮</span>
+          <span v-if="!isDivining">确认起卦 ☯</span>
           <span v-else>正在解析...</span>
         </button>
 
@@ -163,14 +163,14 @@
 
                   <InterpretationCard
                     v-if="result.changedHexagram.interpretation"
-                    icon="🔮"
+                    icon="📜"
                     title="之卦解释"
                     :interpretation="result.changedHexagram.interpretation"
                   />
                 </div>
 
                 <div class="p-4 bg-gradient-to-r from-cinnabar/5 to-gold/5 rounded-ancient border border-border/50">
-                  <div class="text-xs font-semibold text-cinnabar mb-2">🔮 终卦解读</div>
+                  <div class="text-xs font-semibold text-cinnabar mb-2">📜 终卦解读</div>
                   <p class="text-sm text-ink leading-relaxed mb-2">{{ result.finalReading?.summary }}</p>
                   <p class="text-sm text-inkLight">{{ result.finalReading?.advice }}</p>
                   <p class="text-sm text-inkLight mt-1">{{ result.finalReading?.outlook }}</p>

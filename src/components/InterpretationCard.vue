@@ -24,7 +24,7 @@
     </div>
 
     <div v-if="finalText" class="mt-4 p-4 bg-gradient-to-r from-cinnabar/5 to-gold/5 rounded-ancient border border-border/50">
-      <div class="text-xs font-semibold text-cinnabar mb-1">🔮 综合解读</div>
+      <div class="text-xs font-semibold text-cinnabar mb-1">📜 综合解读</div>
       <p class="text-sm text-ink leading-relaxed">{{ finalText }}</p>
     </div>
   </div>
